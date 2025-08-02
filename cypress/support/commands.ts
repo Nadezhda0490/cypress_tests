@@ -35,3 +35,23 @@
 //     }
 //   }
 // }
+
+Cypress.Commands.add("openLoginPage", () => {
+  cy.get('a.c-button[href="/reception/"]').click();
+});
+
+Cypress.Commands.add("openSignUpPage", () => {
+  cy.get('a.c-button[href="/signup/"]').click();
+});
+
+Cypress.Commands.add("getTitle", () => {
+  cy.get(".c-index-title");
+});
+
+Cypress.Commands.add("showSearchField", () => {
+  cy.get('input[type="search"]');
+});
+
+Cypress.Commands.add("switchToAllBrands", () => {
+  cy.contains("Все марки").click();
+});
